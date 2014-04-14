@@ -1,6 +1,6 @@
 #!/usr/bin/python
-# 文件整理脚本
-# 如果目录下文件数超过100，则每100个文件放入新建的子目录中
+# Organize Files Script
+# If file count > 100, put 100 files in sub dir.
 
 import sys
 import os
