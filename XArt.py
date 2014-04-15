@@ -140,11 +140,10 @@ def main():
 
     f = file('XArtVideoName.txt', 'w')
     for name_str in custom_str_list:
-        f.write(name_str)
-        f.newlines()
+        f.write(name_str + u'\r\n')
     f.close()
 
-    video_count = len(video_info_list)
+    logging.info('Finish write file.')
 
 if __name__ == '__main__':
     main()
