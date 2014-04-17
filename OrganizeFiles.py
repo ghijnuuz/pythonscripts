@@ -29,6 +29,9 @@ def main():
         filelist = files
         break
 
+    # Exclude self file
+    filelist.remove(selffilename)
+
     i = 1
     while filecount * i < len(filelist):
         # get sub path's files
@@ -36,8 +39,7 @@ def main():
         subpath = getsubpath(filepath)
         # move files
         for f in subfilelist:
-            if f != selffilename:
-                shutil.move(os.path.join(filepath, f), os.path.join(subpath, f))
+            shutil.move(os.path.join(filepath, f), os.path.join(subpath, f))
         i = i + 1
 
 if __name__ == '__main__':
